@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical"
+        android:elevation="2dp"
+        android:padding="8dp"
+        android:background="@drawable/card_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/listthumb"
+                android:layout_width="75dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="Rss video thumbnail"
+                android:src="@drawable/icon_masjid" />
+
+            <TextView
+                android:text="Nama Masjid"
+                android:id="@+id/listtitle"
+                style="@style/listTitle"
+                android:maxLines="3"
+                android:layout_height="match_parent"
+                android:layout_width="204dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shortdescription"
+            android:layout_width="match_parent"
+            android:text="Alamat Masjid"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.56">
+
+        <TextView
+            android:id="@+id/listpubdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jarak KM"
+            android:textSize="11dp"
+            android:layout_weight="0.56" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*Click for direction"
+            android:textSize="11dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

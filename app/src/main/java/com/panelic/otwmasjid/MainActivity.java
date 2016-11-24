@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
@@ -116,6 +117,27 @@ public class MainActivity extends AppCompatActivity
             //Intent i = new Intent(getApplicationContext(), MapsActivity.class);
             //startActivity(i);
 
+        } else if (id == R.id.rate_app) {
+            // getPackageName() from Context or Activity object
+            final String appPackageName = getPackageName();
+
+            try {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("market://details?id=" + appPackageName)));
+            }
+            catch (android.content.ActivityNotFoundException anfe) {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
+            }
+        } else if (id == R.id.rate_app){
+
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            //this is the text that will be shared
+            sendIntent.putExtra(Intent.EXTRA_TEXT, ("www.ngulikode.com"));
+            sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Share App"); //you can replace title with a string of your choice
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

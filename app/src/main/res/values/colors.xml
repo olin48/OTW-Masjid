@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="myPrimaryColor">#4688F2</color>
     <color name="black">#ecf0f1</color>
     <color name="orange">#1abc9c</color>
     <color name="colorPrimaryDark">#0fa184</color>
     <color name="white">#95a5a6</color>
+
+    <color name="card_white">#ffffff</color>
+    <color name="dark_gray">#292929</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="dim_gray">#696969</color>
+    <color name="light_gray">#BDBDBD</color>
+    <color name="extra_light_gray">#ffdbdbdb</color>
 </resources>

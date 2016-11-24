@@ -11,9 +11,11 @@
     <item android:title="Support">
         <menu>
             <item
+                android:id="@+id/rate_app"
                 android:title="Rate the app"
                 android:icon="@drawable/ic_star_rate"/>
             <item
+                android:id="@+id/share"
                 android:title="Share"
                 android:icon="@drawable/ic_share"/>
         </menu>
