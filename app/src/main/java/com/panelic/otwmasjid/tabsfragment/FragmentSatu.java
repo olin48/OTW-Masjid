@@ -353,7 +353,7 @@ public class FragmentSatu extends Fragment implements LocationListener {
                     "json?location=" + lat + "," + lng +
                     "&radius=1000&sensor=true" +
                     "&types=mosque" +
-                    "&key=AIzaSyBr_oGpGuTiswlmIXt0T8-1Bkv4wQw-3_o";//ADD KEY
+                    "&key=ADD_YOUR_KEY";//ADD KEY
 
             if(isNetworkAvailable()) {
                 //execute query
